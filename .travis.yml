@@ -7,3 +7,10 @@ before_install:
 
 script:
    - docker run antonv/docker-react npm test run -- --coverage
+
+deploy:
+   provider: elasticbeanstalk
+   region: "us-west-2"
+   app: "docker-react"
+   env: "Docker-env"
+   bucket_name: 
